@@ -1,0 +1,27 @@
+---
+template:
+  direction: Horizontal
+  parts:
+    - direction: Vertical
+      body: true
+    - direction: Vertical
+      borderless: true
+      split_size:
+        Fixed: 1
+      run:
+        plugin:
+          location: "zellij:tab-bar"
+          #location: "zellij:compact-bar"
+tabs:
+  - direction: Vertical
+    name:
+  - direction: Vertical
+    name: config
+  - direction: Vertical
+    name: docker
+  - direction: Vertical
+    name: kubernetes
+  - direction: Vertical
+    name: "     "
+  - direction: Vertical
+    name: deployment
