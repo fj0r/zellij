@@ -113,6 +113,8 @@ keybinds:
           key: [ Char: 'k']
         - action: [NewPane: ,]
           key: [ Alt: 'n',]
+        - action: [CloseFocus, SwitchToMode: Normal,]
+          key: [Char: 'x',]
         - action: [MoveFocusOrTab: Left,]
           key: [ Alt: 'h', Alt: Left]
         - action: [MoveFocusOrTab: Right,]
