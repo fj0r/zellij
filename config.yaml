@@ -1,6 +1,6 @@
 simplified_ui: false
 pane_frames: false
-theme: gruvbox-light
+theme: gruvbox-dark
 # Configuration for zellij.
 
 # In order to troubleshoot your configuration try using the following command:
