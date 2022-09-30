@@ -21,14 +21,12 @@ template:
           location: "zellij:status-bar"
 tabs:
   - direction: Vertical
-    name:
+    name: htop
+    run:
+      command: {cmd: htop}
   - direction: Vertical
     name: config
+    run:
+      command: {cmd: nvim, cwd: Configuration}
   - direction: Vertical
-    name: docker
-  - direction: Vertical
-    name: kubernetes
-  - direction: Vertical
-    name: "     "
-  - direction: Vertical
-    name: deployment
+    name: dev
