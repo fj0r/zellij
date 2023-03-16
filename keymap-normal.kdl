@@ -18,18 +18,35 @@ keybinds clear-defaults=true {
         bind "PageUp" { PageScrollUp; }
     }
     tmux {
+        bind "c" { NewTab; SwitchToMode "Normal"; }
+        bind "n" { NewPane; SwitchToMode "Normal"; }
+        bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
         bind "p" { SwitchToMode "pane"; }
-        bind "n" { SwitchToMode "resize"; }
-        bind "t" { SwitchToMode "tab"; }
+        bind "z" { SwitchToMode "resize"; }
         bind "s" { SwitchToMode "scroll"; }
         bind "o" { SwitchToMode "session"; }
         bind "t" { SwitchToMode "tab"; }
-        bind "h" { SwitchToMode "move"; }
-        bind "q" { Quit; }
+        bind "m" { SwitchToMode "move"; }
         bind "d" { Detach; }
+        bind "Ctrl q" { Quit; }
         bind "Alt =" { Resize "Increase"; }
         bind "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
+        bind "h" { MoveFocusOrTab "Left"; }
+        bind "l" { MoveFocusOrTab "Right"; }
+        bind "j" { MoveFocus "Down"; }
+        bind "k" { MoveFocus "Up"; }
+        bind "1" { GoToTab 1; SwitchToMode "Normal"; }
+        bind "2" { GoToTab 2; SwitchToMode "Normal"; }
+        bind "3" { GoToTab 3; SwitchToMode "Normal"; }
+        bind "4" { GoToTab 4; SwitchToMode "Normal"; }
+        bind "5" { GoToTab 5; SwitchToMode "Normal"; }
+        bind "6" { GoToTab 6; SwitchToMode "Normal"; }
+        bind "7" { GoToTab 7; SwitchToMode "Normal"; }
+        bind "8" { GoToTab 8; SwitchToMode "Normal"; }
+        bind "9" { GoToTab 9; SwitchToMode "Normal"; }
+        bind "0" { GoToTab 10; SwitchToMode "Normal"; }
+        bind "Tab" { ToggleTab; }
     }
     // Exclude anything already using the Esc key, because it's lower in the
     // hierarchy (there would be a nicer way of expressing that if the config
