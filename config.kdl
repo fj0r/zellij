@@ -1,10 +1,10 @@
 // If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
 keybinds clear-defaults=true {
     normal {
-        bind "F1" "F2" { SwitchToMode "tmux"; }
+        bind "Ctrl ;" "F1" { SwitchToMode "tmux"; }
     }
     shared_except "normal" {
-        bind "F1" "F2" "Ctrl c" { ScrollToBottom; SwitchToMode "normal"; }
+        bind "Ctrl ;" "F1" "Ctrl c" { ScrollToBottom; SwitchToMode "normal"; }
     }
     shared {
         bind "F5" { GoToPreviousTab; }
