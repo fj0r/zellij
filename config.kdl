@@ -2,6 +2,7 @@
 keybinds clear-defaults=true {
     normal {
         bind "Ctrl ;" "F1" { SwitchToMode "tmux"; }
+        bind "Alt ;" { SwitchToMode "scroll"; }
     }
     shared_except "normal" {
         bind "Ctrl ;" "F1" "Ctrl c" { ScrollToBottom; SwitchToMode "normal"; }
@@ -118,7 +119,7 @@ keybinds clear-defaults=true {
     scroll {
         bind "Ctrl s" { SwitchToMode "Normal"; }
         bind "e" { EditScrollback; SwitchToMode "Normal"; }
-        bind "s" { SwitchToMode "EnterSearch"; SearchInput 0; }
+        bind "s" "Alt ;" { SwitchToMode "EnterSearch"; SearchInput 0; }
         // bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }
         bind "j" "Down" { ScrollDown; }
         bind "k" "Up" { ScrollUp; }
