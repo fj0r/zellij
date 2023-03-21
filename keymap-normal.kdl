@@ -1,6 +1,7 @@
 keybinds clear-defaults=true {
     normal {
         bind "Ctrl ;" "F1" { SwitchToMode "tmux"; }
+        bind "Alt ;" { SwitchToMode "scroll"; }
     }
     shared_except "normal" {
         bind "Ctrl ;" "F1" "Ctrl c" { ScrollToBottom; SwitchToMode "normal"; }
@@ -22,6 +23,8 @@ keybinds clear-defaults=true {
         bind "n" { NewPane; SwitchToMode "Normal"; }
         bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
         bind "p" { SwitchToMode "pane"; }
+        bind "w" { ToggleFloatingPanes; SwitchToMode "Normal"; }
+        bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
         bind "z" { SwitchToMode "resize"; }
         bind "s" { SwitchToMode "scroll"; }
         bind "o" { SwitchToMode "session"; }
@@ -90,6 +93,7 @@ keybinds clear-defaults=true {
     move {
         // bind "Ctrl h" { SwitchToMode "Normal"; }
         bind "n" "Tab" { MovePane; }
+        bind "p" { MovePaneBackwards; }
         bind "h" "Left" { MovePane "Left"; }
         bind "j" "Down" { MovePane "Down"; }
         bind "k" "Up" { MovePane "Up"; }
@@ -117,7 +121,7 @@ keybinds clear-defaults=true {
     scroll {
         bind "Ctrl s" { SwitchToMode "Normal"; }
         bind "e" { EditScrollback; SwitchToMode "Normal"; }
-        bind "s" { SwitchToMode "EnterSearch"; SearchInput 0; }
+        bind "s" "Alt ;" { SwitchToMode "EnterSearch"; SearchInput 0; }
         // bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }
         bind "j" "Down" { ScrollDown; }
         bind "k" "Up" { ScrollUp; }
