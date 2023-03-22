@@ -20,9 +20,9 @@ keybinds clear-defaults=true {
         bind "PageUp" { PageScrollUp; }
     }
     tmux {
-        bind "c" { NewTab; SwitchToMode "Normal"; }
-        bind "n" { NewPane; SwitchToMode "Normal"; }
+        bind "c" { NewTab; SwitchToMode "RenameTab"; TabNameInput 0; }
         bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
+        bind "n" { NewPane; SwitchToMode "Normal"; }
         bind "p" { SwitchToMode "pane"; }
         bind "w" { ToggleFloatingPanes; SwitchToMode "Normal"; }
         bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
