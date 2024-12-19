@@ -2,6 +2,23 @@ keybinds clear-defaults=true {
     locked {
         bind "Ctrl ;" { SwitchToMode "normal"; }
     }
+    normal {
+        bind "d" { Detach; }
+        bind "e" { EditScrollback; SwitchToMode "locked"; }
+        bind "f" { ToggleFloatingPanes; }
+        bind "n" { NewPane; SwitchToMode "locked"; }
+        bind "N" { NewTab; SwitchToMode "locked"; }
+        bind "r" { SwitchToMode "renametab"; TabNameInput 0; }
+        bind "R" { SwitchToMode "resize"; }
+        bind "h" { MoveFocusOrTab "left"; }
+        bind "j" { MoveFocus "down"; }
+        bind "k" { MoveFocus "up"; }
+        bind "l" { MoveFocusOrTab "right"; }
+        bind "i" { MoveTab "left"; }
+        bind "o" { MoveTab "right"; }
+        bind "," { HalfPageScrollUp; }
+        bind "." { HalfPageScrollDown; }
+    }
     pane {
         bind "left" { MoveFocus "left"; }
         bind "down" { MoveFocus "down"; }
@@ -149,7 +166,6 @@ keybinds clear-defaults=true {
     }
     shared_except "locked" "renametab" "renamepane" {
         bind "Ctrl ;" { SwitchToMode "locked"; }
-        bind "d" { Detach; }
         bind "Ctrl q" { Quit; }
     }
     shared_except "locked" "entersearch" {
@@ -409,3 +425,4 @@ copy_command "wl-copy"                    // wayland
 // Default: true (if the host terminal supports it)
 // 
 // support_kitty_keyboard_protocol false
+
