@@ -14,6 +14,7 @@ keybinds clear-defaults=true {
         bind "j" { MoveFocus "down"; }
         bind "k" { MoveFocus "up"; }
         bind "l" { MoveFocusOrTab "right"; }
+        bind "x" { CloseFocus; SwitchToMode "locked"; }
         bind "i" { MoveTab "left"; }
         bind "o" { MoveTab "right"; }
         bind "," { HalfPageScrollUp; }
