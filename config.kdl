@@ -3,7 +3,6 @@ keybinds clear-defaults=true {
         bind "Alt space" { SwitchToMode "normal"; }
     }
     normal {
-        bind "d" { Detach; }
         bind "e" { EditScrollback; SwitchToMode "locked"; }
         bind "f" { ToggleFloatingPanes; }
         bind "Alt f" { ToggleFloatingPanes; SwitchToMode "locked"; }
@@ -142,7 +141,6 @@ keybinds clear-defaults=true {
             }
             SwitchToMode "locked"
         }
-        bind "d" { Detach; }
         bind "o" { SwitchToMode "normal"; }
         bind "p" {
             LaunchOrFocusPlugin "plugin-manager" {
@@ -182,6 +180,7 @@ keybinds clear-defaults=true {
         bind "Alt space" { SwitchToMode "locked"; }
         bind "space" { SwitchToMode "locked"; }
         bind "Ctrl q" { Quit; }
+        bind "Ctrl d" { Detach; }
     }
     shared_except "locked" "entersearch" {
         bind "Alt space" { SwitchToMode "locked"; }
